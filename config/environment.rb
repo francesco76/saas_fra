@@ -6,10 +6,10 @@ Rails.application.initialize!
 
 ActionMailer::Base.smtp_settings = {
   :address => 'mail.zoho.com',
-  :port => '587',
+  :port => '25',
   :authentication => :plain,
   :user_name => 'francesco.parravicini@netizens.it',
-  :password => 'N3tiz3ns.',
+  :password => 'n3tiz3ns.',
   :domain => 'heroku.com',
   :enable_startstls_auto => true
 }
