@@ -26,7 +26,7 @@
         <li><%= link_to "About", about_path %></li>
         <li><%= link_to "Contact Us", new_contact_path %> </li>
       </ul>
-      <div class="nav navbar-nav navbar-left">
+      <div class="nav navbar-nav navbar-right">
         <% if current_user %>
         <%= button_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-primary navbar-btn"%>
         <% else %>
