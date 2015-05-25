@@ -10,6 +10,4 @@ ActionMailer::Base.smtp_settings = {
   :authentication => :plain,
   :user_name => 'francesco.parravicini@netizens.it',
   :password => 'n3tiz3ns.',
-  :domain => 'heroku.com',
-  :enable_startstls_auto => true
 }
