@@ -5,7 +5,7 @@ require File.expand_path('../application', __FILE__)
 Rails.application.initialize!
 
 ActionMailer::Base.smtp_settings = {
-  :address => 'mail.zoho.com',
+  :address => 'smtp.zoho.com',
   :port => '465',
   :authentication => :plain,
   :user_name => 'francesco.parravicini@netizens.it',
