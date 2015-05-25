@@ -6,7 +6,7 @@ Rails.application.initialize!
 
 ActionMailer::Base.smtp_settings = {
   :address => 'mail.zoho.com',
-  :port => '25',
+  :port => '465',
   :authentication => :plain,
   :user_name => 'francesco.parravicini@netizens.it',
   :password => 'n3tiz3ns.',
