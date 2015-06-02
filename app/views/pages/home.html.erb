@@ -1,20 +1,39 @@
-<%= link_to "Profile", new_user_profile_path(current_user) if current_user %>
-
 <div class="jumbotron text-center">
   <h1>SaaS Demo</h1>
   <h3>Building a SaaS site with Ruby</h3>
 </div>  
 <div class="row">
-  <div class="col-md-6">
-    <div class="well">
-      <h2 class="text-center">Basic Plan</h2>
-      <%= link_to "Sign Up for free", new_user_registration_path(plan: @basic_plan.id), class: "btn btn-primary btn-lg btn-block"%>
+  <% if user_signed_in? %>
+    <div class="col-md-6">
+      <div class="well">
+        <% if current_user.profile %>
+          <h2 class="text-center"> Your Profile </h2>
+        <%= link_to "Edit your profile", edit_user_path(current_user), class:'btn btn-default btn-lg btn-block' %>
+          <%= link_to "View your profile", user_path(current_user), class:'btn btn-default btn-lg btn-block' %>
+        <%else%>     
+          <%= link_to "Create your profile", new_user_profile_path(current_user) %>
+        <%end%>
+      </div>
     </div>
-  </div>
-  <div class="col-md-6">
-    <div class="well">
-      <h2 class="text-center">Pro Plan</h2>
-      <%= link_to "Sign Up for 10$/month", new_user_registration_path(plan: @pro_plan.id), class: "btn btn-success btn-lg btn-block"%>
+    <div class="col-md-6">
+      <div class="well">   
+        <h2 class="text-center"> Community </h2>
+        <%= link_to "Enter the community", "#", class:'btn btn-default btn-lg btn-block'%>
+      </div>
     </div>
-  </div>
+  <%else%>
+  
+    <div class="col-md-6">
+      <div class="well">
+        <h2 class="text-center">Basic Plan</h2>
+        <%= link_to "Sign Up for free", new_user_registration_path(plan: @basic_plan.id), class: "btn btn-primary btn-lg btn-block"%>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="well">
+        <h2 class="text-center">Pro Plan</h2>
+        <%= link_to "Sign Up for 10$/month", new_user_registration_path(plan: @pro_plan.id), class: "btn btn-success btn-lg btn-block"%>
+      </div>
+    </div>
+  <%end%>
 </div
