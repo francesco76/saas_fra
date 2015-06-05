@@ -38,6 +38,8 @@ gem 'stripe', '1.16.1'
 gem 'figaro', '1.0.0'
 # Use paperclip for image upload
 gem 'paperclip', '4.2.1'
+# Use autoprefixer for css
+gem 'autoprefixer-rails'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '3.1.7'
 # Use unicorn as the app server

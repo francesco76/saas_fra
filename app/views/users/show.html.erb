@@ -1,7 +1,7 @@
 <div class="row">
  <div class="col-md-12 well">
-  <div class="col-md-3 text-center profile-image">
-    <%= image_tag @user.profile.avatar.url %>
+  <div class="col-md-3 text-center">
+    <%= image_tag @user.profile.avatar.url, class: 'user-avatar' %>
   </div>
   <div class="col-md-6">
     <h2><%= @user.profile.first_name %> <%= @user.profile.last_name %><br></h2>
